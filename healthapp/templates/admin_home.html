@@ -1,0 +1,100 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid lightblue;
+  border-radius: 5px;
+}
+
+.prjdiv:hover{
+transform:translateY(-10px)
+}
+div .container1{
+
+width:100%;
+background-color:white;
+border-radius:8px;
+}
+h2, h4{
+ padding:10Px;
+}
+
+</style>
+
+
+<div class="container-fluid" style="margin-top:8%;width:100%;margin-left:10%;">
+    <div class="container-fluid">
+        <h1 align="center" style="font-weight:bold;font-family:roman">ADMIN DASHBOARD</h1><hr/>
+    </div>
+             <div class="row">
+
+			        <div class="col-md-3" ><a href="{% url 'view_doctor' %}">
+						<div style="margin:1%;padding:10px; box-shadow: 2px 12px 15px rgba(25, 119, 204, 15);background:red;color:white;">
+						<h3 style="font-weight:bold;font-size:35px">{{doc}}</h3><br/>
+						        <h4 style="font-weight:bold;">Total Doctors</h4>
+						        <p style="color:#fff">All access are given .</p>
+							</div></a>
+					</div>
+
+
+					<div class="col-md-3" ><a href="{% url 'view_patient' %}">
+						    <div style="padding:10px;margin:1%;background:red;color:white; box-shadow: 10px 12px 15px rgba(25, 119, 204, 15);">
+						        <h3 style="font-weight:bold;font-size:35px">{{pat}}</h3><br/>
+						        <h4 style="font-weight:bold;">Total Users</h4>
+						        <p style="color:#fff">All access are given .</p>
+							</div></a>
+							</div>
+
+
+						<div class="col-md-3" >
+							<a href="{% url 'view_search_pat' %}">
+								<div style="padding:10px;margin:1%;box-shadow: 2px 12px 15px rgba(25, 119, 204, 15);background:red;color:white;">
+						        <h3 style="font-weight:bold;font-size:35px; color: #FFF;">{{dis}}</h3><br/>
+						        <h4 style="font-weight:bold;color: #fff;">Records</h4>
+						        <p style="color:#fff">All access are given .</p>
+</a>
+							</div>
+						</div>
+
+             </div>
+		</div>
+
+	<div>
+      <!--<div class="container">
+
+        <div class="row pt-5 mt-5 text-center">
+          <div>
+            <p style = "font-size : 30pt ; color : #FF0000 ; font-weight : bold">
+
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All Rights Reserved <span style = "color : brown">|</span> <span style = "color : #006400">This website is made with <i class="fas fa-heart icon-heart text-warning" aria-hidden="true"></i> by </span><a class= "glow" href="#" target="_blank" >Harish Panjwani</a>
+
+            </p>
+          </div>
+
+        </div>
+      </div>-->
+
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block body %}
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" style="margin-left: 20%;">
+
+        <div class="section-title">
+          <h2>Welcome</h2>
+      
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="/login_admin">welcome Admin</a></h4>
+              <p>This is a admin section where admin can assign doctor, generate report, view patient records etc</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="{% url 'login' %}">General Health Prediction</a></h4>
+              <p>This is the user section where users and doctor both can register clicking on this feature. Both user and doctor can login their specific portal from here</p>
+            </div>
+          </div>
+
+
+         
+
+         
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+   
+
+  
+    
+
+  <!-- ======= Footer ======= -->
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<style>
+    .div1{
+    color:green;
+    }
+    .div2{
+    color:red;
+    }
+</style>
+<div class="container" style="width:40%;margin-top:8%;margin-bottom:5%;background:white;border-radius:2%;border:1px solid grey">
+    <h2 style="font-weight:bold;font-family : 'Monotype Corsiva' ; color : #E6120E ;margin-top:2%" align="center"></h2>
+    <div class="row">
+        
+        <div class="col-md-6">
+            <img src="{{pro.image.url}}" style="width:45%;height:100%; border-radius: 60%;margin-left: 70%;"></img>
+        </div></div>
+
+<div align="left" class="container-fluid" style="width:100%;margin-bottom:3%">
+    <hr><div class="row" >
+        <div class="col-md-4 div2">
+            <strong>Full Name:</strong>
+        </div>
+        <div class="col-md-4 div1">
+            {{pro.user.first_name}} {{pro.user.last_name}}
+        </div>
+    </div>
+
+
+    
+
+    <div class="row">
+        <div class="col-md-4 div2">
+            <strong>Email Id :</strong>
+        </div>
+        <div class="col-md-4 div1">
+            {{pro.user.email}}
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="col-md-4 div2">
+            <strong>Date of Birth :</strong>
+        </div>
+        <div class="col-md-4 div1">
+            {{pro.dob}}
+        </div>
+    </div>
+
+
+     <div class="row">
+        <div class="col-md-4 div2">
+            <strong>Contact :</strong>
+        </div>
+        <div class="col-md-4 div1">
+            {{pro.contact}}
+        </div>
+     </div>
+
+    <div class="row">
+        <div class="col-md-4 div2">
+            <strong>Address :</strong>
+        </div>
+        <div class="col-md-4 div1">
+            {{pro.address}}
+        </div>
+    </div>
+    {% ifnotequal error "pat" %}
+    <div class="row">
+        <div class="col-md-6 div2">
+            <strong>Specialist :</strong>
+        </div>
+        <div class="col-md-6 div1">
+            {{pro.category}}
+        </div>
+    </div>
+    {% endifnotequal %}
+    <div class="login px-sm-12" style="width:100%">
+    <a href="{% url 'edit_profile' %}">
+        <button class="btn btn-primary submit mt-4" style="width:100%">Update Detail</button>
+    </a>
+    </div>
+</div>
+</div>
+{% endblock %}
